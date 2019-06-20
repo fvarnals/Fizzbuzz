@@ -13,7 +13,7 @@ Use Test Driven Development (TDD) to create and test a program which, when given
 
 ## Process
 
-1. First set up RSpec.
+###1. First set up RSpec.
 
 Install the gem using:
 
@@ -25,7 +25,7 @@ Then initialise the project using:
 
 2. Create a new Ruby file for our spec tests
 
-    touch spec/fizzbuzz_spec.rb
+      touch spec/fizzbuzz_spec.rb
 
 Then run RSpec to check that there are no errors (since there are currently 0 tests, there should be no failures)
 
@@ -57,13 +57,13 @@ For this we used the same format as before, but altered for our new test:
 
 5. Now we need to change our fizzbuzz method to deal with mutliples of 5, and also all multiples of 3, rather than just 3 itself!
 
-    def fizzbuzz(number)
-    	if number % 3 == 0
-    		return 'fizz'
-    	elsif number % 5 == 0
-    		return 'buzz'
-    	end
-    end
+      def fizzbuzz(number)
+      	if number % 3 == 0
+      		return 'fizz'
+      	elsif number % 5 == 0
+      		return 'buzz'
+      	end
+      end
 
 6. Now we add a test for an integer that is a multiple of both 3 and 5. Let's start with 15.
 
