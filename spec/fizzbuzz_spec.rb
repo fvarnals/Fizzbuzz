@@ -6,4 +6,13 @@ describe 'fizzbuzz' do
   it 'returns "buzz" when passed 5' do
 	  expect(fizzbuzz(5)).to eq 'buzz'
   end
+  it 'returns "fizzbuzz" when passed 15' do
+    expect(fizzbuzz(15)).to eq 'fizzbuzz'
+  end
+  it 'returns 7 when passed 7' do
+    expect(fizzbuzz(7)).to eq 7
+  end
+  it 'returns "fizzbuzz" when passed a multiple of both 3 and 5' do
+    expect(fizzbuzz(rand(999999)*15)).to eq 'fizzbuzz'
+  end
 end
