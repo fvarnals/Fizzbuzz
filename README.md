@@ -13,7 +13,7 @@ Use Test Driven Development (TDD) to create and test a program which, when given
 
 ## Process
 
-###1. First set up RSpec.
+### 1. First set up RSpec.
 
 Install the gem using:
 
