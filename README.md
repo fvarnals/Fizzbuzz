@@ -23,13 +23,13 @@ Then initialise the project using:
 
     rspec --init
 
-2. Create a new Ruby file for our spec tests
+### 2. Create a new Ruby file for our spec tests
 
       touch spec/fizzbuzz_spec.rb
 
 Then run RSpec to check that there are no errors (since there are currently 0 tests, there should be no failures)
 
-3. Create the first test.
+### 3. Create the first test.
 
 The first test is that the program fizzbuzz will return 'fizz' when passed the integer 3 as an input:
 
@@ -47,7 +47,7 @@ We first wrote a method which will always return 'fizz':
 
 This works initially because we're only looking for a 3 to return 'fizz', however the program will also return 'fizz' for any number whatsoever! What about the other inputs?
 
-4. Create a new test to include 5 as an input integer.
+### 4. Create a new test to include 5 as an input integer.
 
 For this we used the same format as before, but altered for our new test:
 
@@ -55,7 +55,7 @@ For this we used the same format as before, but altered for our new test:
       expect(fizzbuzz(5)).to eq 'buzz'
     end
 
-5. Now we need to change our fizzbuzz method to deal with mutliples of 5, and also all multiples of 3, rather than just 3 itself!
+### 5. Now we need to change our fizzbuzz method to deal with mutliples of 5, and also all multiples of 3, rather than just 3 itself!
 
       def fizzbuzz(number)
       	if number % 3 == 0
@@ -65,7 +65,7 @@ For this we used the same format as before, but altered for our new test:
       	end
       end
 
-6. Now we add a test for an integer that is a multiple of both 3 and 5. Let's start with 15.
+### 6. Now we add a test for an integer that is a multiple of both 3 and 5. Let's start with 15.
 
 We add the following new test to our fizzbuzz_spec.rb file:
 
@@ -85,7 +85,7 @@ We also need to update our method to address this. We'll have to put the case wh
     	end
     end
 
-  7. Finally, we need to address the case where the input integer is not a multiple of either 3 or 5. So lets add a test for that, choosing an input number that meets the criterion; we'll use 7:
+### 7. Finally, we need to address the case where the input integer is not a multiple of either 3 or 5. So lets add a test for that, choosing an input number that meets the criterion; we'll use 7:
 
     it 'returns 7 when passed 7' do
       expect(fizzbuzz(7)).to eq 7
@@ -98,7 +98,7 @@ We also need to update our method to address this. We'll have to put the case wh
 
   i.e if none of the other criteria are met (input integer is not divisible by both 3 and 5, or just 3, or just 5) then we return the input integer.
 
-  8. To make the test more rigorous, we added a new test where the test input is a random multiple of 15, expecting the output to be 'fizzbuzz':
+### 8. To make the test more rigorous, we added a new test where the test input is a random multiple of 15, expecting the output to be 'fizzbuzz':
 
     it 'returns "fizzbuzz" when passed a multiple of both 3 and 5' do
       expect(fizzbuzz(rand(999999)*15)).to eq 'fizzbuzz'
